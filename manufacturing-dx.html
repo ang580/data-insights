@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>製造業DX・AI導入支援ガイド 2026 | Data Insights Lab</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0e17;color:#c8d6e5;font-family:'Segoe UI','Hiragino Sans',sans-serif;line-height:1.8}
+a{color:#00d2ff;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:860px;margin:0 auto;padding:0 24px}
+header{background:linear-gradient(135deg,#0a0e17 0%,#1a1f36 100%);border-bottom:1px solid #1e2a3a;padding:18px 0}
+header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.1rem;font-weight:700;color:#fff}
+.logo span{color:#00d2ff}
+nav a{color:#8892b0;margin-left:20px;font-size:.88rem}
+nav a:hover{color:#00d2ff}
+.hero-article{padding:60px 0 40px;border-bottom:1px solid #1e2a3a}
+.badge{display:inline-block;background:#00d2ff22;color:#00d2ff;padding:4px 14px;border-radius:20px;font-size:.78rem;font-weight:600;margin-bottom:16px}
+.badge.ind{background:#a78bfa22;color:#a78bfa}
+h1{font-size:2rem;color:#fff;line-height:1.4;margin-bottom:12px}
+.meta{color:#5a6a80;font-size:.85rem}
+.summary{font-size:1.05rem;color:#a0aec0;border-left:3px solid #00d2ff;padding-left:16px;margin:24px 0}
+.content{padding:40px 0}
+h2{font-size:1.35rem;color:#fff;margin:36px 0 16px;padding-bottom:8px;border-bottom:1px solid #1e2a3a}
+p{margin-bottom:16px}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:20px 0}
+.stat{background:#0f1629;border:1px solid #1e2a3a;border-radius:10px;padding:20px;text-align:center}
+.stat .num{font-size:1.8rem;font-weight:700;color:#00d2ff}
+.stat .label{font-size:.8rem;color:#5a6a80;margin-top:4px}
+.case-card{background:#111827;border:1px solid #1e2a3a;border-radius:12px;padding:24px;margin:16px 0}
+.case-card h3{color:#fff;margin:0 0 4px}
+.case-card .industry{color:#a78bfa;font-size:.82rem;font-weight:600;margin-bottom:10px}
+.case-card .result{background:#22c55e15;border:1px solid #22c55e33;border-radius:8px;padding:12px;margin-top:12px;font-size:.9rem}
+.case-card .result strong{color:#22c55e}
+.roadmap{position:relative;padding-left:32px;margin:24px 0}
+.roadmap::before{content:'';position:absolute;left:11px;top:0;bottom:0;width:2px;background:#1e2a3a}
+.rm-step{position:relative;margin-bottom:28px}
+.rm-step::before{content:'';position:absolute;left:-32px;top:6px;width:24px;height:24px;border-radius:50%;background:#0f1629;border:2px solid #00d2ff}
+.rm-step.done::before{background:#00d2ff}
+.rm-step h4{color:#fff;font-size:1rem;margin-bottom:4px}
+.rm-step .time{color:#00d2ff;font-size:.78rem;font-weight:600}
+.rm-step p{font-size:.9rem;color:#8892b0;margin-top:4px}
+.challenge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0}
+.ch-card{background:#0f1629;border:1px solid #1e2a3a;border-radius:10px;padding:20px}
+.ch-card h4{color:#ff6347;font-size:.95rem;margin-bottom:8px}
+.ch-card .pct{font-size:1.4rem;font-weight:700;color:#ff6347;margin-bottom:4px}
+.ch-card p{font-size:.85rem;color:#8892b0}
+.ch-card .solution{margin-top:10px;padding-top:10px;border-top:1px solid #1e2a3a;color:#22c55e;font-size:.85rem}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.88rem}
+th{background:#1a1f36;color:#00d2ff;padding:12px;text-align:left;font-weight:600}
+td{padding:10px 12px;border-bottom:1px solid #1e2a3a}
+tr:hover{background:#111827}
+.cta-box{background:linear-gradient(135deg,#1a1f36,#0f1629);border:1px solid #00d2ff33;border-radius:12px;padding:32px;margin:36px 0;text-align:center}
+.cta-box h3{color:#fff;margin-bottom:8px}
+.cta-box p{color:#8892b0;margin-bottom:16px}
+.btn{display:inline-block;background:#00d2ff;color:#0a0e17;padding:10px 28px;border-radius:8px;font-weight:600;font-size:.92rem}
+.btn:hover{background:#00b8e6;text-decoration:none}
+.disclaimer{background:#111827;border:1px solid #1e2a3a;border-radius:8px;padding:16px;margin:32px 0;font-size:.78rem;color:#5a6a80}
+footer{border-top:1px solid #1e2a3a;padding:24px 0;text-align:center;font-size:.8rem;color:#3a4a5a}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="logo">Data <span>Insights</span> Lab</div>
+<nav><a href="index.html">ホーム</a><a href="ai-semiconductor.html">半導体投資</a><a href="ai-agent-tools.html">AIエージェント</a></nav>
+</div>
+</header>
+<div class="container">
+<div class="hero-article">
+<span class="badge ind">業界レポート</span>
+<span class="badge">事例集</span>
+<h1>製造業DX・AI導入支援ガイド 2026</h1>
+<div class="meta">2026年4月10日 更新 ｜ 読了時間 約9分 ｜ カテゴリ: ビジネス・DX</div>
+<div class="summary">製造業のIoT・AI活用率は26.1%と全産業平均を上回るペースで進展。一方で約75%の企業が導入障壁に直面。成功事例とロードマップから最適な導入戦略を解説します。</div>
+</div>
+<div class="content">
+<h2>1. 製造業AI市場の現状</h2>
+<div class="data-grid">
+<div class="stat"><div class="num">26.1%</div><div class="label">IoT・AI活用率</div></div>
+<div class="stat"><div class="num">+30%</div><div class="label">生産性向上（導入企業平均）</div></div>
+<div class="stat"><div class="num">75%</div><div class="label">導入障壁を感じる企業</div></div>
+<div class="stat"><div class="num">500万円</div><div class="label">年間コスト削減（大手事例）</div></div>
+</div>
+<p>2026年の日本の製造業は、生成AI・LLM・RAG・画像解析技術の急速な発展を背景に、エージェンティックAIへの移行フェーズに突入しています。</p>
+<h2>2. 注目の導入事例</h2>
+<div class="case-card">
+<h3>大手自動車メーカー：AIリアルタイム異常検知</h3>
+<div class="industry">自動車製造 ｜ 品質管理</div>
+<p>生産ラインにAI画像認識システムを導入し、製品の微細な欠陥をリアルタイムで検知。従来の目視検査では発見困難だった不良も自動識別。</p>
+<div class="result"><strong>成果：</strong>生産性約30%向上、年間約500万円のコスト削減</div>
+</div>
+<div class="case-card">
+<h3>Smart Craft：工程管理AIアシスタント</h3>
+<div class="industry">製造業全般 ｜ 工程管理・SaaS</div>
+<p>2026年1月提供開始のクラウドサービス。工程管理・生産実績データを生成AIが分析し、ボトルネック特定や改善提案を自動生成。</p>
+<div class="result"><strong>特徴：</strong>中小製造業でも導入しやすいSaaS型</div>
+</div>
+<div class="case-card">
+<h3>パナソニック：生成AI全社導入</h3>
+<div class="industry">電機メーカー ｜ 業務効率化</div>
+<p>全社規模で生成AIツールを導入。設計書作成・技術文書要約・社内ナレッジ検索など多領域で活用。</p>
+<div class="result"><strong>成果：</strong>業務効率30%アップを達成した部門も</div>
+</div>
+<h2>3. 導入の壁と解決策</h2>
+<div class="challenge-grid">
+<div class="ch-card">
+<div class="pct">75%</div>
+<h4>導入すべきシステムが不明</h4>
+<p>何から始めればよいか分からない</p>
+<div class="solution">→ 小規模PoCから開始しROIを可視化</div>
+</div>
+<div class="ch-card">
+<div class="pct">68%</div>
+<h4>AI人材の不足</h4>
+<p>使いこなせる人材がいない</p>
+<div class="solution">→ ノーコードAIツール活用+外部連携</div>
+</div>
+<div class="ch-card">
+<div class="pct">52%</div>
+<h4>データ基盤の未整備</h4>
+<p>紙ベース・Excel管理がAI活用を阻害</p>
+<div class="solution">→ IoTセンサー+クラウドDBで段階的デジタル化</div>
+</div>
+</div>
+<h2>4. AI導入ロードマップ（推奨6ステップ）</h2>
+<div class="roadmap">
+<div class="rm-step done"><div class="time">Month 1-2</div><h4>Phase 1: 現状分析・課題整理</h4><p>業務フローの可視化、データ資産の棚卸し</p></div>
+<div class="rm-step done"><div class="time">Month 3-4</div><h4>Phase 2: PoC（概念実証）</h4><p>最もROIが高い1領域で小規模実証実験</p></div>
+<div class="rm-step"><div class="time">Month 5-6</div><h4>Phase 3: パイロット導入</h4><p>PoC成功領域で本格導入+トレーニング</p></div>
+<div class="rm-step"><div class="time">Month 7-9</div><h4>Phase 4: 水平展開</h4><p>成功パターンを他ライン・他工場に展開</p></div>
+<div class="rm-step"><div class="time">Month 10-12</div><h4>Phase 5: データ統合・高度化</h4><p>複数システム統合、予測分析・最適化AIへ</p></div>
+<div class="rm-step"><div class="time">Year 2+</div><h4>Phase 6: エージェンティックAI移行</h4><p>自律判断AI導入、人間は監視・例外処理に集中</p></div>
+</div>
+<h2>5. 無料・低コストで始められるAIツール</h2>
+<table>
+<tr><th>ツール</th><th>用途</th><th>コスト</th><th>難易度</th></tr>
+<tr><td><strong>Google Teachable Machine</strong></td><td>画像分類モデル</td><td>無料</td><td>低</td></tr>
+<tr><td><strong>Smart Craft</strong></td><td>工程管理・生産実績</td><td>月額SaaS</td><td>低</td></tr>
+<tr><td><strong>Power Automate</strong></td><td>業務フロー自動化</td><td>無料プランあり</td><td>低〜中</td></tr>
+<tr><td><strong>Dify</strong></td><td>AIアプリ構築</td><td>OSS無料</td><td>中</td></tr>
+<tr><td><strong>Python + OpenCV</strong></td><td>画像検査</td><td>無料（OSS）</td><td>高</td></tr>
+</table>
+<div class="cta-box">
+<h3>製造業DX事例集をダウンロード</h3>
+<p>業種別AI導入事例20選と投資対効果算出テンプレートを無料配布中。</p>
+<a href="#" class="btn">無料ダウンロード</a>
+</div>
+<div class="disclaimer">
+<strong>免責事項：</strong>本記事は情報提供を目的としており、特定の製品・サービスを推奨するものではありません。導入効果は企業の状況により異なります。
+</div>
+</div>
+</div>
+<footer>
+<div class="container">&copy; 2026 Data Insights Lab. All rights reserved. | <a href="index.html">ホーム</a></div>
+</footer>
+</body>
+  </html>
