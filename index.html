@@ -2,145 +2,164 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data Insights - データ駆動型市場分析</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Data Insights Lab | AI・金融・ビジネスのデータ分析</title>
+<meta name="description" content="AI半導体投資、AIエージェント、製造業DXなど最新のデータ分析レポートを配信。">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI','Hiragino Sans',sans-serif;background:#0a0e17;color:#e0e6ed;line-height:1.7}
-a{color:#4fc3f7;text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-header{background:linear-gradient(135deg,#0d1b2a 0%,#1b2838 100%);border-bottom:1px solid #1e3a5f;padding:60px 0 40px}
-header h1{font-size:2.4em;color:#fff;margin-bottom:8px}
-header p{color:#8899aa;font-size:1.1em}
-.badge{display:inline-block;background:#1e3a5f;color:#4fc3f7;padding:4px 12px;border-radius:20px;font-size:.8em;margin:8px 4px 0 0}
-nav{background:#0d1117;border-bottom:1px solid #1e3a5f;padding:12px 0;position:sticky;top:0;z-index:100}
-nav .container{display:flex;gap:24px;align-items:center}
-nav a{color:#8899aa;font-weight:500;padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
-nav a:hover,nav a.active{color:#4fc3f7;border-bottom-color:#4fc3f7}
-.hero{padding:60px 0;text-align:center}
-.hero h2{font-size:2em;color:#fff;margin-bottom:16px}
-.hero p{color:#8899aa;max-width:700px;margin:0 auto 30px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin:40px 0}
-.stat-card{background:#111827;border:1px solid #1e3a5f;border-radius:12px;padding:24px;text-align:center}
-.stat-card .number{font-size:2.2em;font-weight:700;color:#4fc3f7}
-.stat-card .label{color:#8899aa;font-size:.9em;margin-top:4px}
-section{padding:50px 0}
-section h2{font-size:1.6em;color:#fff;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid #1e3a5f}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
-.card{background:#111827;border:1px solid #1e3a5f;border-radius:12px;padding:24px;transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-2px);border-color:#4fc3f7}
-.card h3{color:#fff;font-size:1.15em;margin-bottom:8px}
-.card p{color:#8899aa;font-size:.95em}
-.tag{display:inline-block;background:#1a2332;color:#4fc3f7;padding:2px 10px;border-radius:12px;font-size:.75em;margin:8px 4px 0 0}
-.tag.high{background:#1a3328;color:#4caf50}
-.tag.mid{background:#332d1a;color:#ff9800}
-.tag.low{background:#331a1a;color:#f44336}
-.cta{background:linear-gradient(135deg,#1e3a5f,#0d2137);border:1px solid #2a5a8f;border-radius:12px;padding:40px;text-align:center;margin:40px 0}
-.cta h3{color:#fff;font-size:1.4em;margin-bottom:8px}
-.cta p{color:#8899aa;margin-bottom:20px}
-.btn{display:inline-block;background:#4fc3f7;color:#0a0e17;padding:12px 28px;border-radius:8px;font-weight:600;transition:.2s}
-.btn:hover{background:#29b6f6;color:#0a0e17}
-table{width:100%;border-collapse:collapse;margin:16px 0}
-th,td{padding:12px 16px;text-align:left;border-bottom:1px solid #1e3a5f}
-th{background:#111827;color:#4fc3f7;font-weight:600}
+body{background:#0a0e17;color:#c8d6e5;font-family:'Segoe UI','Hiragino Sans',sans-serif;line-height:1.8}
+a{color:#00d2ff;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+header{background:linear-gradient(135deg,#0a0e17 0%,#1a1f36 100%);border-bottom:1px solid #1e2a3a;padding:18px 0;position:sticky;top:0;z-index:100}
+header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.2rem;font-weight:700;color:#fff}
+.logo span{color:#00d2ff}
+nav a{color:#8892b0;margin-left:20px;font-size:.88rem;transition:color .2s}
+nav a:hover{color:#00d2ff}
+.badge-row{display:flex;gap:8px;margin-top:4px}
+.hdr-badge{background:#00d2ff15;color:#00d2ff;padding:2px 10px;border-radius:12px;font-size:.7rem}
+.hero{padding:80px 0 60px;text-align:center;border-bottom:1px solid #1e2a3a}
+.hero h1{font-size:2.4rem;color:#fff;margin-bottom:12px;line-height:1.3}
+.hero p{font-size:1.1rem;color:#8892b0;max-width:640px;margin:0 auto 28px}
+.hero-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.hero-stats .s{text-align:center}
+.hero-stats .s .n{font-size:1.6rem;font-weight:700;color:#00d2ff}
+.hero-stats .s .l{font-size:.78rem;color:#5a6a80}
+.section-title{font-size:1.5rem;color:#fff;margin:48px 0 24px;padding-bottom:10px;border-bottom:1px solid #1e2a3a}
+.reports{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:48px}
+.report-card{background:#111827;border:1px solid #1e2a3a;border-radius:14px;overflow:hidden;transition:border-color .3s,transform .2s}
+.report-card:hover{border-color:#00d2ff44;transform:translateY(-3px)}
+.card-top{padding:24px 24px 0}
+.card-badge{display:inline-block;padding:3px 12px;border-radius:16px;font-size:.72rem;font-weight:600;margin-bottom:10px}
+.card-badge.finance{background:#ff634722;color:#ff6347}
+.card-badge.ai{background:#22c55e22;color:#22c55e}
+.card-badge.biz{background:#a78bfa22;color:#a78bfa}
+.report-card h3{font-size:1.15rem;color:#fff;margin-bottom:8px;line-height:1.4}
+.report-card .desc{font-size:.9rem;color:#8892b0;margin-bottom:16px}
+.card-meta{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;border-top:1px solid #1e2a3a;font-size:.8rem;color:#5a6a80}
+.read-link{color:#00d2ff;font-weight:600;font-size:.88rem}
+.theme-section{margin:48px 0}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{background:#1a1f36;color:#00d2ff;padding:12px;text-align:left;font-weight:600;position:sticky;top:60px}
+td{padding:10px 12px;border-bottom:1px solid #1e2a3a}
 tr:hover{background:#111827}
-footer{background:#0d1117;border-top:1px solid #1e3a5f;padding:30px 0;text-align:center;color:#556677;font-size:.9em}
-@media(max-width:600px){header h1{font-size:1.6em}.hero h2{font-size:1.4em}.grid{grid-template-columns:1fr}}
+.priority{display:inline-block;padding:2px 10px;border-radius:8px;font-size:.75rem;font-weight:600}
+.priority.a{background:#22c55e22;color:#22c55e}
+.priority.b{background:#ffa50022;color:#ffa500}
+.cta{background:linear-gradient(135deg,#1a1f36,#0f1629);border:1px solid #00d2ff33;border-radius:14px;padding:40px;margin:48px 0;text-align:center}
+.cta h2{color:#fff;font-size:1.4rem;margin-bottom:8px}
+.cta p{color:#8892b0;margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto}
+.btn{display:inline-block;background:#00d2ff;color:#0a0e17;padding:12px 32px;border-radius:8px;font-weight:700;font-size:.95rem;transition:background .2s}
+.btn:hover{background:#00b8e6;text-decoration:none}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:48px 0;padding:32px;background:#111827;border-radius:14px;border:1px solid #1e2a3a}
+.about h2{color:#fff;font-size:1.2rem;margin-bottom:10px}
+.about p{font-size:.9rem;color:#8892b0}
+@media(max-width:640px){.about{grid-template-columns:1fr}}
+.disclaimer{background:#111827;border:1px solid #1e2a3a;border-radius:8px;padding:16px;margin:32px 0;font-size:.75rem;color:#5a6a80}
+footer{border-top:1px solid #1e2a3a;padding:24px 0;text-align:center;font-size:.8rem;color:#3a4a5a}
 </style>
 </head>
 <body>
 <header>
 <div class="container">
-<h1>Data Insights</h1>
-<p>データ駆動型市場分析・予測プラットフォーム</p>
-<span class="badge">金融分析</span>
-<span class="badge">AIトレンド</span>
-<span class="badge">統計レポート</span>
-<span class="badge">市場予測</span>
+<div>
+<div class="logo">Data <span>Insights</span> Lab</div>
+<div class="badge-row"><span class="hdr-badge">データ分析</span><span class="hdr-badge">AI</span><span class="hdr-badge">金融</span><span class="hdr-badge">DX</span></div>
+</div>
+<nav>
+<a href="ai-semiconductor.html">半導体投資</a>
+<a href="ai-agent-tools.html">AIエージェント</a>
+<a href="manufacturing-dx.html">製造業DX</a>
+</nav>
 </div>
 </header>
-<nav><div class="container">
-<a href="#" class="active">ホーム</a>
-<a href="#reports">レポート</a>
-<a href="#themes">分析テーマ</a>
-<a href="#track">予測実績</a>
-<a href="#about">このサイトについて</a>
-</div></nav>
-
-<div class="hero"><div class="container">
-<h2>データに基づく市場分析を無料で提供</h2>
-<p>AIと統計分析を活用し、金融市場・テクノロジー・ビジネストレンドの最新分析レポートを配信します。すべての予測は実績データとともに公開します。</p>
-<a href="#reports" class="btn">最新レポートを読む</a>
-</div></div>
-
-<div class="container"><div class="stats">
-<div class="stat-card"><div class="number">27</div><div class="label">分析テーマ</div></div>
-<div class="stat-card"><div class="number">0</div><div class="label">公開レポート</div></div>
-<div class="stat-card"><div class="number">--</div><div class="label">予測的中率</div></div>
-<div class="stat-card"><div class="number">2026.04</div><div class="label">運用開始</div></div>
-</div></div>
-
-<section id="reports"><div class="container">
-<h2>最新レポート</h2>
-<div class="grid">
-<div class="card">
-<h3>📊 2026年4月 日本株式市場分析</h3>
-<p>AI・半導体セクターの動向、防衛関連株の上昇トレンド、金融セクターの見通しを分析。</p>
-<span class="tag">金融</span><span class="tag high">需要: 高</span>
-<p style="color:#556677;font-size:.8em;margin-top:12px">※ 準備中 — 近日公開予定</p>
-</div>
-<div class="card">
-<h3>🤖 AIエージェント市場レポート 2026</h3>
-<p>エージェンティックAIの実装動向、主要プレイヤー分析、日本市場への影響を解説。</p>
-<span class="tag">AI</span><span class="tag high">需要: 高</span>
-<p style="color:#556677;font-size:.8em;margin-top:12px">※ 準備中 — 近日公開予定</p>
-</div>
-<div class="card">
-<h3>💱 暗号資産規制改革レポート</h3>
-<p>2026年4月の金商法移管、税制改正（55%→20%）の影響を分析。</p>
-<span class="tag">仮想通貨</span><span class="tag high">需要: 高</span>
-<p style="color:#556677;font-size:.8em;margin-top:12px">※ 準備中 — 近日公開予定</p>
+<div class="container">
+<div class="hero">
+<h1>データで読み解く<br>AI・金融・ビジネスの最前線</h1>
+<p>最新の市場データと独自分析で、ビジネスの意思決定をサポート。週刊レポート・ツール比較・業界分析を無料配信中。</p>
+<div class="hero-stats">
+<div class="s"><div class="n">27</div><div class="l">分析テーマ</div></div>
+<div class="s"><div class="n">3</div><div class="l">公開レポート</div></div>
+<div class="s"><div class="n">12</div><div class="l">A評価テーマ</div></div>
+<div class="s"><div class="n">Weekly</div><div class="l">更新頻度</div></div>
 </div>
 </div>
-</div></section>
-
-<section id="themes"><div class="container">
-<h2>分析テーマ一覧</h2>
+<h2 class="section-title">最新レポート</h2>
+<div class="reports">
+<div class="report-card">
+<div class="card-top">
+<span class="card-badge finance">金融・投資分析</span>
+<h3>AI半導体インフラ投資分析 2026</h3>
+<p class="desc">市場規模3,385億ドル、前年比+34.4%。NVIDIA vs AMD vs Google、アジア設備投資1,360億ドルの全貌を解説。</p>
+</div>
+<div class="card-meta">
+<span>2026.04.10 更新</span>
+<a href="ai-semiconductor.html" class="read-link">レポートを読む →</a>
+</div>
+</div>
+<div class="report-card">
+<div class="card-top">
+<span class="card-badge ai">AI・テクノロジー</span>
+<h3>AIエージェント開発ツール比較 2026</h3>
+<p class="desc">CAGR 46.3%成長のAIエージェント市場。Claude Code、Devin 3.0、Cursor Agentなど主要ツールを徹底比較。</p>
+</div>
+<div class="card-meta">
+<span>2026.04.10 更新</span>
+<a href="ai-agent-tools.html" class="read-link">レポートを読む →</a>
+</div>
+</div>
+<div class="report-card">
+<div class="card-top">
+<span class="card-badge biz">ビジネス・DX</span>
+<h3>製造業DX・AI導入支援ガイド 2026</h3>
+<p class="desc">IoT・AI活用率26.1%の製造業。成功事例3選と6ステップ導入ロードマップ、無料ツール一覧を公開。</p>
+</div>
+<div class="card-meta">
+<span>2026.04.10 更新</span>
+<a href="manufacturing-dx.html" class="read-link">レポートを読む →</a>
+</div>
+</div>
+</div>
+<div class="theme-section">
+<h2 class="section-title">ビジネステーマ一覧（A評価 Top 12）</h2>
 <table>
-<tr><th>テーマ</th><th>分野</th><th>需要</th><th>競争</th><th>収益性</th></tr>
-<tr><td>AI・半導体インフラ投資</td><td>金融</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
-<tr><td>防衛・宇宙産業</td><td>金融</td><td>⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐</td></tr>
-<tr><td>金融セクター分析</td><td>金融</td><td>⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐</td></tr>
-<tr><td>暗号資産規制動向</td><td>金融</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐</td></tr>
-<tr><td>AIエージェント開発</td><td>AI</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
-<tr><td>フィジカルAI・ロボティクス</td><td>AI</td><td>⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐</td></tr>
-<tr><td>製造業DX・AI導入</td><td>AI</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
-<tr><td>予測市場プラットフォーム</td><td>ビジネス</td><td>⭐⭐</td><td>⭐</td><td>⭐⭐⭐</td></tr>
-<tr><td>医療・ヘルスケア分析</td><td>ビジネス</td><td>⭐⭐</td><td>⭐</td><td>⭐⭐⭐</td></tr>
-<tr><td>不動産データ分析</td><td>ビジネス</td><td>⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐</td></tr>
+<tr><th>テーマ</th><th>分野</th><th>スコア</th><th>優先度</th><th>収益モデル</th></tr>
+<tr><td>AI・半導体インフラ投資分析</td><td>金融</td><td>3.00</td><td><span class="priority a">A</span></td><td>週刊レポート + 有料シグナル</td></tr>
+<tr><td>AIエージェント開発支援</td><td>AI</td><td>3.00</td><td><span class="priority a">A</span></td><td>ツール比較 + 導入ガイド</td></tr>
+<tr><td>製造業DX・AI導入支援</td><td>AI</td><td>2.85</td><td><span class="priority a">A</span></td><td>業界レポート + 事例集</td></tr>
+<tr><td>AI導入コンサルティング</td><td>ビジネス</td><td>2.85</td><td><span class="priority a">A</span></td><td>分析レポート + ツール比較</td></tr>
+<tr><td>暗号資産規制動向</td><td>金融</td><td>2.80</td><td><span class="priority a">A</span></td><td>速報 + 有料分析レポート</td></tr>
+<tr><td>金融セクター（銀行）分析</td><td>金融</td><td>2.75</td><td><span class="priority a">A</span></td><td>週刊レポート + 決算分析</td></tr>
+<tr><td>防衛・宇宙産業関連分析</td><td>金融</td><td>2.60</td><td><span class="priority a">A</span></td><td>月刊レポート + ニュースレター</td></tr>
+<tr><td>企業決算・業績予想分析</td><td>金融</td><td>2.60</td><td><span class="priority a">A</span></td><td>決算期レポート + DB</td></tr>
+<tr><td>フィジカルAI・ロボティクス</td><td>AI</td><td>2.60</td><td><span class="priority a">A</span></td><td>月刊分析 + 企業データベース</td></tr>
+<tr><td>AIネイティブ開発支援</td><td>AI</td><td>2.60</td><td><span class="priority a">A</span></td><td>技術レポート + チュートリアル</td></tr>
+<tr><td>小売データ分析</td><td>ビジネス</td><td>2.60</td><td><span class="priority a">A</span></td><td>業界レポート + DB</td></tr>
+<tr><td>プロンプトエンジニアリング</td><td>ビジネス</td><td>2.55</td><td><span class="priority a">A</span></td><td>テンプレート集 + ガイド</td></tr>
 </table>
-<p style="color:#556677;margin-top:12px">※ 全27テーマの詳細評価は評価レポート（Excel）をご覧ください。</p>
-</div></section>
-
-<section id="track"><div class="container">
-<h2>予測実績トラッカー</h2>
+</div>
 <div class="cta">
-<h3>透明性のある分析を目指して</h3>
-<p>すべての予測・分析は日時・内容・結果を記録し、実績データとして公開します。運用開始後、ここに的中率・ROIが表示されます。</p>
-<p style="color:#4fc3f7;font-size:.9em">運用開始: 2026年4月</p>
+<h2>週刊レポートを無料で受け取る</h2>
+<p>AI・金融・ビジネスの最新データ分析を毎週お届け。登録は30秒で完了。</p>
+<a href="#" class="btn">メール登録（無料）</a>
 </div>
-</div></section>
-
-<section id="about"><div class="container">
-<h2>このサイトについて</h2>
-<div class="card" style="max-width:700px">
-<h3>免責事項</h3>
-<p>本サイトのコンテンツは情報提供を目的としたものであり、投資助言ではありません。分析結果に基づく投資判断はご自身の責任で行ってください。AIを活用した分析を含みますが、すべてのデータは検証済みの情報源に基づいています。</p>
+<div class="about">
+<div>
+<h2>Data Insights Labとは</h2>
+<p>AI・金融・ビジネス領域のデータ分析と市場インサイトを提供するリサーチメディアです。公開データと独自分析を組み合わせ、意思決定に役立つ情報を発信しています。</p>
 </div>
-</div></section>
-
-<footer><div class="container">
-<p>&copy; 2026 Data Insights. All rights reserved. | <a href="#">プライバシーポリシー</a> | <a href="#">特定商取引法に基づく表記</a></p>
-</div></footer>
+<div>
+<h2>更新ポリシー</h2>
+<p>主要レポートは週次更新。テーマ評価は月次で見直し。すべてのデータは公開情報に基づき、出典を明記しています。投資助言ではありません。</p>
+</div>
+</div>
+<div class="disclaimer">
+<strong>免責事項：</strong>本サイトは情報提供のみを目的としており、投資助言・金融商品の勧誘ではありません。掲載情報は公開データに基づいていますが、正確性・完全性を保証するものではありません。投資判断はご自身の責任で行ってください。本サイトは金融商品取引法に基づく投資助言業の登録を受けていません。AI関連の評価・比較は公開情報に基づく独自分析であり、特定製品の推奨ではありません。
+</div>
+</div>
+<footer>
+<div class="container">&copy; 2026 Data Insights Lab. All rights reserved.</div>
+</footer>
 </body>
-                                                     </html>
+  </html>
