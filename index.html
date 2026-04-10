@@ -4,162 +4,143 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Data Insights Lab | AI・金融・ビジネスのデータ分析</title>
-<meta name="description" content="AI半導体投資、AIエージェント、製造業DXなど最新のデータ分析レポートを配信。">
+<meta name="description" content="最新の市場データと独自分析で、AI・金融・ビジネスの意思決定をサポート。週刊レポートを無料配信中。">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0e17;color:#c8d6e5;font-family:'Segoe UI','Hiragino Sans',sans-serif;line-height:1.8}
-a{color:#00d2ff;text-decoration:none}
-a:hover{text-decoration:underline}
-.container{max-width:1080px;margin:0 auto;padding:0 24px}
-header{background:linear-gradient(135deg,#0a0e17 0%,#1a1f36 100%);border-bottom:1px solid #1e2a3a;padding:18px 0;position:sticky;top:0;z-index:100}
-header .container{display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:1.2rem;font-weight:700;color:#fff}
-.logo span{color:#00d2ff}
-nav a{color:#8892b0;margin-left:20px;font-size:.88rem;transition:color .2s}
-nav a:hover{color:#00d2ff}
-.badge-row{display:flex;gap:8px;margin-top:4px}
-.hdr-badge{background:#00d2ff15;color:#00d2ff;padding:2px 10px;border-radius:12px;font-size:.7rem}
-.hero{padding:80px 0 60px;text-align:center;border-bottom:1px solid #1e2a3a}
-.hero h1{font-size:2.4rem;color:#fff;margin-bottom:12px;line-height:1.3}
-.hero p{font-size:1.1rem;color:#8892b0;max-width:640px;margin:0 auto 28px}
-.hero-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
-.hero-stats .s{text-align:center}
-.hero-stats .s .n{font-size:1.6rem;font-weight:700;color:#00d2ff}
-.hero-stats .s .l{font-size:.78rem;color:#5a6a80}
-.section-title{font-size:1.5rem;color:#fff;margin:48px 0 24px;padding-bottom:10px;border-bottom:1px solid #1e2a3a}
-.reports{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:48px}
-.report-card{background:#111827;border:1px solid #1e2a3a;border-radius:14px;overflow:hidden;transition:border-color .3s,transform .2s}
-.report-card:hover{border-color:#00d2ff44;transform:translateY(-3px)}
-.card-top{padding:24px 24px 0}
-.card-badge{display:inline-block;padding:3px 12px;border-radius:16px;font-size:.72rem;font-weight:600;margin-bottom:10px}
-.card-badge.finance{background:#ff634722;color:#ff6347}
-.card-badge.ai{background:#22c55e22;color:#22c55e}
-.card-badge.biz{background:#a78bfa22;color:#a78bfa}
-.report-card h3{font-size:1.15rem;color:#fff;margin-bottom:8px;line-height:1.4}
-.report-card .desc{font-size:.9rem;color:#8892b0;margin-bottom:16px}
-.card-meta{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;border-top:1px solid #1e2a3a;font-size:.8rem;color:#5a6a80}
-.read-link{color:#00d2ff;font-weight:600;font-size:.88rem}
-.theme-section{margin:48px 0}
-table{width:100%;border-collapse:collapse;font-size:.88rem}
+a{color:#00d2ff;text-decoration:none}a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+header{background:#0a0e17;border-bottom:1px solid #1e2a3a;padding:16px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+header .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.logo{font-size:1.2rem;font-weight:700;color:#fff}.logo span{color:#00d2ff}
+.tags{display:flex;gap:8px;margin-top:4px}
+.tag{background:#1a1f36;color:#00d2ff;padding:2px 10px;border-radius:12px;font-size:.72rem}
+nav a{color:#8892b0;margin-left:20px;font-size:.88rem}nav a:hover{color:#00d2ff}
+.hero{text-align:center;padding:72px 24px 48px;background:linear-gradient(180deg,#0a0e17 0%,#111827 100%)}
+.hero h1{font-size:2.2rem;color:#fff;line-height:1.4;margin-bottom:16px}
+.hero p{font-size:1.05rem;color:#8892b0;max-width:640px;margin:0 auto 32px}
+.stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin:32px 0}
+.stats .item .num{font-size:2rem;font-weight:700;color:#00d2ff}
+.stats .item .label{font-size:.8rem;color:#5a6a80}
+.section-title{font-size:1.5rem;color:#fff;text-align:center;margin:56px 0 28px;position:relative}
+.section-title::after{content:'';display:block;width:60px;height:3px;background:#00d2ff;margin:12px auto 0}
+.report-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin:0 auto;max-width:1100px;padding:0 24px}
+.report-card{background:#111827;border:1px solid #1e2a3a;border-radius:14px;padding:28px;transition:all .3s}
+.report-card:hover{border-color:#00d2ff;transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,210,255,.1)}
+.report-card .category{font-size:.72rem;color:#00d2ff;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.report-card h3{color:#fff;font-size:1.15rem;margin:8px 0}
+.report-card p{color:#8892b0;font-size:.88rem;margin-bottom:16px}
+.report-card .btn{display:inline-block;background:#00d2ff22;color:#00d2ff;padding:8px 20px;border-radius:8px;font-size:.85rem;font-weight:600;transition:background .2s}
+.report-card .btn:hover{background:#00d2ff33;text-decoration:none}
+.theme-table{max-width:1100px;margin:0 auto;padding:0 24px}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.85rem}
 th{background:#1a1f36;color:#00d2ff;padding:12px;text-align:left;font-weight:600;position:sticky;top:60px}
 td{padding:10px 12px;border-bottom:1px solid #1e2a3a}
 tr:hover{background:#111827}
-.priority{display:inline-block;padding:2px 10px;border-radius:8px;font-size:.75rem;font-weight:600}
-.priority.a{background:#22c55e22;color:#22c55e}
-.priority.b{background:#ffa50022;color:#ffa500}
-.cta{background:linear-gradient(135deg,#1a1f36,#0f1629);border:1px solid #00d2ff33;border-radius:14px;padding:40px;margin:48px 0;text-align:center}
-.cta h2{color:#fff;font-size:1.4rem;margin-bottom:8px}
-.cta p{color:#8892b0;margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto}
-.btn{display:inline-block;background:#00d2ff;color:#0a0e17;padding:12px 32px;border-radius:8px;font-weight:700;font-size:.95rem;transition:background .2s}
-.btn:hover{background:#00b8e6;text-decoration:none}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:48px 0;padding:32px;background:#111827;border-radius:14px;border:1px solid #1e2a3a}
-.about h2{color:#fff;font-size:1.2rem;margin-bottom:10px}
-.about p{font-size:.9rem;color:#8892b0}
-@media(max-width:640px){.about{grid-template-columns:1fr}}
-.disclaimer{background:#111827;border:1px solid #1e2a3a;border-radius:8px;padding:16px;margin:32px 0;font-size:.75rem;color:#5a6a80}
-footer{border-top:1px solid #1e2a3a;padding:24px 0;text-align:center;font-size:.8rem;color:#3a4a5a}
+.rank-a{color:#22c55e;font-weight:700}.rank-b{color:#eab308;font-weight:600}
+.newsletter{background:linear-gradient(135deg,#1a1f36 0%,#0f1629 100%);border:1px solid #00d2ff33;border-radius:16px;padding:48px 32px;margin:56px auto;max-width:600px;text-align:center}
+.newsletter h2{color:#fff;font-size:1.3rem;margin-bottom:8px}
+.newsletter p{color:#8892b0;margin-bottom:24px;font-size:.92rem}
+.newsletter form{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.newsletter input[type="email"]{flex:1;min-width:220px;padding:12px 16px;border-radius:8px;border:1px solid #1e2a3a;background:#0a0e17;color:#fff;font-size:.92rem}
+.newsletter input[type="email"]::placeholder{color:#5a6a80}
+.newsletter button{background:#00d2ff;color:#0a0e17;padding:12px 28px;border-radius:8px;border:none;font-weight:700;font-size:.92rem;cursor:pointer;transition:background .2s}
+.newsletter button:hover{background:#00b8e6}
+.newsletter .privacy{font-size:.72rem;color:#5a6a80;margin-top:12px}
+.about{max-width:700px;margin:40px auto;padding:0 24px;text-align:center}
+.about h2{color:#fff;font-size:1.2rem;margin-bottom:12px}
+.about p{color:#8892b0;font-size:.9rem}
+.disclaimer{max-width:1100px;margin:32px auto;padding:16px 24px;background:#111827;border:1px solid #1e2a3a;border-radius:8px;font-size:.75rem;color:#5a6a80}
+footer{border-top:1px solid #1e2a3a;padding:24px;text-align:center;font-size:.78rem;color:#3a4a5a;margin-top:40px}
+@media(max-width:600px){.hero h1{font-size:1.5rem}.stats{gap:24px}.report-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header>
 <div class="container">
-<div>
-<div class="logo">Data <span>Insights</span> Lab</div>
-<div class="badge-row"><span class="hdr-badge">データ分析</span><span class="hdr-badge">AI</span><span class="hdr-badge">金融</span><span class="hdr-badge">DX</span></div>
-</div>
-<nav>
-<a href="ai-semiconductor.html">半導体投資</a>
-<a href="ai-agent-tools.html">AIエージェント</a>
-<a href="manufacturing-dx.html">製造業DX</a>
-</nav>
+<div><div class="logo">Data <span>Insights</span> Lab</div><div class="tags"><span class="tag">データ分析</span><span class="tag">AI</span><span class="tag">金融</span><span class="tag">DX</span></div></div>
+<nav><a href="ai-semiconductor.html">半導体投資</a><a href="ai-agent-tools.html">AIエージェント</a><a href="manufacturing-dx.html">製造業DX</a></nav>
 </div>
 </header>
-<div class="container">
+
 <div class="hero">
+<div class="container">
 <h1>データで読み解く<br>AI・金融・ビジネスの最前線</h1>
 <p>最新の市場データと独自分析で、ビジネスの意思決定をサポート。週刊レポート・ツール比較・業界分析を無料配信中。</p>
-<div class="hero-stats">
-<div class="s"><div class="n">27</div><div class="l">分析テーマ</div></div>
-<div class="s"><div class="n">3</div><div class="l">公開レポート</div></div>
-<div class="s"><div class="n">12</div><div class="l">A評価テーマ</div></div>
-<div class="s"><div class="n">Weekly</div><div class="l">更新頻度</div></div>
+<div class="stats">
+<div class="item"><div class="num">27</div><div class="label">分析テーマ</div></div>
+<div class="item"><div class="num">3</div><div class="label">公開レポート</div></div>
+<div class="item"><div class="num">12</div><div class="label">A評価テーマ</div></div>
+<div class="item"><div class="num">Weekly</div><div class="label">更新頻度</div></div>
 </div>
 </div>
-<h2 class="section-title">最新レポート</h2>
-<div class="reports">
+</div>
+
+<div class="section-title">最新レポート</div>
+<div class="report-grid">
 <div class="report-card">
-<div class="card-top">
-<span class="card-badge finance">金融・投資分析</span>
+<div class="category">金融・投資分析</div>
 <h3>AI半導体インフラ投資分析 2026</h3>
-<p class="desc">市場規模3,385億ドル、前年比+34.4%。NVIDIA vs AMD vs Google、アジア設備投資1,360億ドルの全貌を解説。</p>
-</div>
-<div class="card-meta">
-<span>2026.04.10 更新</span>
-<a href="ai-semiconductor.html" class="read-link">レポートを読む →</a>
-</div>
+<p>市場規模$3,386B、成長率+34.4%。NVIDIA・AMD・Googleの勢力図とアジア投資ラッシュを分析。</p>
+<a href="ai-semiconductor.html" class="btn">レポートを読む →</a>
 </div>
 <div class="report-card">
-<div class="card-top">
-<span class="card-badge ai">AI・テクノロジー</span>
+<div class="category">AI・テクノロジー</div>
 <h3>AIエージェント開発ツール比較 2026</h3>
-<p class="desc">CAGR 46.3%成長のAIエージェント市場。Claude Code、Devin 3.0、Cursor Agentなど主要ツールを徹底比較。</p>
-</div>
-<div class="card-meta">
-<span>2026.04.10 更新</span>
-<a href="ai-agent-tools.html" class="read-link">レポートを読む →</a>
-</div>
+<p>CAGR 46.3%急成長市場。Claude Code・Devin 3.0・Cursor等の機能・料金を徹底比較。</p>
+<a href="ai-agent-tools.html" class="btn">レポートを読む →</a>
 </div>
 <div class="report-card">
-<div class="card-top">
-<span class="card-badge biz">ビジネス・DX</span>
+<div class="category">製造業・DX</div>
 <h3>製造業DX・AI導入支援ガイド 2026</h3>
-<p class="desc">IoT・AI活用率26.1%の製造業。成功事例3選と6ステップ導入ロードマップ、無料ツール一覧を公開。</p>
-</div>
-<div class="card-meta">
-<span>2026.04.10 更新</span>
-<a href="manufacturing-dx.html" class="read-link">レポートを読む →</a>
+<p>導入率26.1%、生産性+30%。成功事例3選と6ステップロードマップで実践ガイド。</p>
+<a href="manufacturing-dx.html" class="btn">レポートを読む →</a>
 </div>
 </div>
-</div>
-<div class="theme-section">
-<h2 class="section-title">ビジネステーマ一覧（A評価 Top 12）</h2>
+
+<div class="section-title">A評価テーマ一覧</div>
+<div class="theme-table">
 <table>
-<tr><th>テーマ</th><th>分野</th><th>スコア</th><th>優先度</th><th>収益モデル</th></tr>
-<tr><td>AI・半導体インフラ投資分析</td><td>金融</td><td>3.00</td><td><span class="priority a">A</span></td><td>週刊レポート + 有料シグナル</td></tr>
-<tr><td>AIエージェント開発支援</td><td>AI</td><td>3.00</td><td><span class="priority a">A</span></td><td>ツール比較 + 導入ガイド</td></tr>
-<tr><td>製造業DX・AI導入支援</td><td>AI</td><td>2.85</td><td><span class="priority a">A</span></td><td>業界レポート + 事例集</td></tr>
-<tr><td>AI導入コンサルティング</td><td>ビジネス</td><td>2.85</td><td><span class="priority a">A</span></td><td>分析レポート + ツール比較</td></tr>
-<tr><td>暗号資産規制動向</td><td>金融</td><td>2.80</td><td><span class="priority a">A</span></td><td>速報 + 有料分析レポート</td></tr>
-<tr><td>金融セクター（銀行）分析</td><td>金融</td><td>2.75</td><td><span class="priority a">A</span></td><td>週刊レポート + 決算分析</td></tr>
-<tr><td>防衛・宇宙産業関連分析</td><td>金融</td><td>2.60</td><td><span class="priority a">A</span></td><td>月刊レポート + ニュースレター</td></tr>
-<tr><td>企業決算・業績予想分析</td><td>金融</td><td>2.60</td><td><span class="priority a">A</span></td><td>決算期レポート + DB</td></tr>
-<tr><td>フィジカルAI・ロボティクス</td><td>AI</td><td>2.60</td><td><span class="priority a">A</span></td><td>月刊分析 + 企業データベース</td></tr>
-<tr><td>AIネイティブ開発支援</td><td>AI</td><td>2.60</td><td><span class="priority a">A</span></td><td>技術レポート + チュートリアル</td></tr>
-<tr><td>小売データ分析</td><td>ビジネス</td><td>2.60</td><td><span class="priority a">A</span></td><td>業界レポート + DB</td></tr>
-<tr><td>プロンプトエンジニアリング</td><td>ビジネス</td><td>2.55</td><td><span class="priority a">A</span></td><td>テンプレート集 + ガイド</td></tr>
+<tr><th>#</th><th>テーマ</th><th>カテゴリ</th><th>総合スコア</th><th>評価</th><th>ステータス</th></tr>
+<tr><td>1</td><td>AI半導体インフラ投資分析</td><td>金融</td><td>3.55</td><td class="rank-a">A</td><td><a href="ai-semiconductor.html">公開中</a></td></tr>
+<tr><td>2</td><td>AIエージェント開発ツール比較</td><td>AI</td><td>3.50</td><td class="rank-a">A</td><td><a href="ai-agent-tools.html">公開中</a></td></tr>
+<tr><td>3</td><td>製造業DX・AI導入支援ガイド</td><td>DX</td><td>3.40</td><td class="rank-a">A</td><td><a href="manufacturing-dx.html">公開中</a></td></tr>
+<tr><td>4</td><td>量子コンピュータ投資ガイド</td><td>金融</td><td>3.35</td><td class="rank-a">A</td><td>準備中</td></tr>
+<tr><td>5</td><td>宇宙ビジネス市場分析</td><td>ビジネス</td><td>3.30</td><td class="rank-a">A</td><td>準備中</td></tr>
+<tr><td>6</td><td>フィンテックアプリ比較</td><td>金融</td><td>3.25</td><td class="rank-a">A</td><td>準備中</td></tr>
+<tr><td>7</td><td>生成AI動画制作ツール分析</td><td>AI</td><td>3.25</td><td class="rank-a">A</td><td>準備中</td></tr>
+<tr><td>8</td><td>サステナブル投資分析</td><td>金融</td><td>3.20</td><td class="rank-a">A</td><td>準備中</td></tr>
+<tr><td>9</td><td>ノーコードAIアプリビルダー比較</td><td>AI</td><td>3.15</td><td class="rank-a">A</td><td>準備中</td></tr>
+<tr><td>10</td><td>農業DX・スマート農業分析</td><td>DX</td><td>3.10</td><td class="rank-a">A</td><td>準備中</td></tr>
+<tr><td>11</td><td>サイバーセキュリティ市場分析</td><td>AI</td><td>3.05</td><td class="rank-a">A</td><td>準備中</td></tr>
+<tr><td>12</td><td>EV・電動モビリティ市場分析</td><td>ビジネス</td><td>3.00</td><td class="rank-a">A</td><td>準備中</td></tr>
 </table>
 </div>
-<div class="cta">
-<h2>週刊レポートを無料で受け取る</h2>
-<p>AI・金融・ビジネスの最新データ分析を毎週お届け。登録は30秒で完了。</p>
-<a href="#" class="btn">メール登録（無料）</a>
+
+<div class="newsletter">
+<h2>週刊レポートを受け取る</h2>
+<p>毎週最新の分析レポートをメールでお届け。登録無料・解除自由。</p>
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<input type="email" name="email" placeholder="メールアドレスを入力" required>
+<button type="submit">無料登録</button>
+</form>
+<div class="privacy">※ メールアドレスはレポート配信のみに使用します。第三者への提供は行いません。</div>
 </div>
+
 <div class="about">
-<div>
-<h2>Data Insights Labとは</h2>
-<p>AI・金融・ビジネス領域のデータ分析と市場インサイトを提供するリサーチメディアです。公開データと独自分析を組み合わせ、意思決定に役立つ情報を発信しています。</p>
+<h2>Data Insights Lab について</h2>
+<p>AI・金融・ビジネス領域の最新データを独自の視点で分析。データに基づく意思決定を支援する無料メディアです。毎週新しいレポートを公開しています。</p>
 </div>
-<div>
-<h2>更新ポリシー</h2>
-<p>主要レポートは週次更新。テーマ評価は月次で見直し。すべてのデータは公開情報に基づき、出典を明記しています。投資助言ではありません。</p>
-</div>
-</div>
+
 <div class="disclaimer">
-<strong>免責事項：</strong>本サイトは情報提供のみを目的としており、投資助言・金融商品の勧誘ではありません。掲載情報は公開データに基づいていますが、正確性・完全性を保証するものではありません。投資判断はご自身の責任で行ってください。本サイトは金融商品取引法に基づく投資助言業の登録を受けていません。AI関連の評価・比較は公開情報に基づく独自分析であり、特定製品の推奨ではありません。
+<strong>免責事項：</strong>本サイトの情報は情報提供を目的としており、投資劧誘を目的としたものではありません。投資に関する最終判断はご自身の責任で行ってください。本サイトにはアフィリエイトリンクが含まれています。リンク経由で購入された場合、当サイトに報酬が支払われることがあります。
 </div>
-</div>
+
 <footer>
-<div class="container">&copy; 2026 Data Insights Lab. All rights reserved.</div>
+<div class="container">&copy; 2026 Data Insights Lab. All rights reserved. | <a href="#newsletter">メール登録</a> | <a href="#">プライバシーポリシー</a></div>
 </footer>
 </body>
   </html>
