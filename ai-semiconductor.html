@@ -4,41 +4,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>AI半導体インフラ投資分析 2026 | Data Insights Lab</title>
+<meta name="description" content="2026年のAI半導体市場を徹底分析。NVIDIA・AMD・Googleの勢力図とアジア投資ラッシュを解説。">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0e17;color:#c8d6e5;font-family:'Segoe UI','Hiragino Sans',sans-serif;line-height:1.8}
-a{color:#00d2ff;text-decoration:none}
-a:hover{text-decoration:underline}
+a{color:#00d2ff;text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:860px;margin:0 auto;padding:0 24px}
 header{background:linear-gradient(135deg,#0a0e17 0%,#1a1f36 100%);border-bottom:1px solid #1e2a3a;padding:18px 0}
 header .container{display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:1.1rem;font-weight:700;color:#fff}
-.logo span{color:#00d2ff}
-nav a{color:#8892b0;margin-left:20px;font-size:.88rem}
-nav a:hover{color:#00d2ff}
+.logo{font-size:1.1rem;font-weight:700;color:#fff}.logo span{color:#00d2ff}
+nav a{color:#8892b0;margin-left:20px;font-size:.88rem}nav a:hover{color:#00d2ff}
 .hero-article{padding:60px 0 40px;border-bottom:1px solid #1e2a3a}
-.badge{display:inline-block;background:#00d2ff22;color:#00d2ff;padding:4px 14px;border-radius:20px;font-size:.78rem;font-weight:600;margin-bottom:16px}
-.badge.hot{background:#ff634722;color:#ff6347}
+.badge{display:inline-block;background:#00d2ff22;color:#00d2ff;padding:4px 14px;border-radius:20px;font-size:.78rem;font-weight:600;margin-bottom:16px;margin-right:8px}
+.badge.hot{background:#ef444422;color:#ef4444}
 h1{font-size:2rem;color:#fff;line-height:1.4;margin-bottom:12px}
-.meta{color:#5a6a80;font-size:.85rem}
+.meta{color:#5a6a80;font-size:.85rem;margin-bottom:8px}
 .summary{font-size:1.05rem;color:#a0aec0;border-left:3px solid #00d2ff;padding-left:16px;margin:24px 0}
 .content{padding:40px 0}
 h2{font-size:1.35rem;color:#fff;margin:36px 0 16px;padding-bottom:8px;border-bottom:1px solid #1e2a3a}
+h3{font-size:1.1rem;color:#e2e8f0;margin:24px 0 12px}
 p{margin-bottom:16px}
-.data-card{background:#111827;border:1px solid #1e2a3a;border-radius:12px;padding:24px;margin:24px 0}
-.data-card h4{color:#00d2ff;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
 .data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:20px 0}
 .stat{background:#0f1629;border:1px solid #1e2a3a;border-radius:10px;padding:20px;text-align:center}
 .stat .num{font-size:1.8rem;font-weight:700;color:#00d2ff}
 .stat .label{font-size:.8rem;color:#5a6a80;margin-top:4px}
-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.9rem}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.88rem}
 th{background:#1a1f36;color:#00d2ff;padding:12px;text-align:left;font-weight:600}
 td{padding:10px 12px;border-bottom:1px solid #1e2a3a}
 tr:hover{background:#111827}
-.risk{display:inline-block;padding:2px 10px;border-radius:10px;font-size:.78rem;font-weight:600}
-.risk.high{background:#ff634722;color:#ff6347}
-.risk.mid{background:#ffa50022;color:#ffa500}
-.risk.low{background:#00d2ff22;color:#00d2ff}
+.risk-badge{display:inline-block;padding:2px 10px;border-radius:6px;font-size:.78rem;font-weight:600}
+.risk-high{background:#ef444422;color:#ef4444}
+.risk-mid{background:#eab30822;color:#eab308}
+.risk-low{background:#22c55e22;color:#22c55e}
+.affiliate-box{background:#111827;border:1px solid #1e2a3a;border-radius:12px;padding:24px;margin:24px 0}
+.affiliate-box h4{color:#fff;margin-bottom:8px;font-size:1rem}
+.affiliate-box p{color:#8892b0;font-size:.88rem;margin-bottom:12px}
+.affiliate-box .aff-link{display:inline-block;background:#00d2ff22;color:#00d2ff;padding:8px 20px;border-radius:8px;font-size:.85rem;font-weight:600}
+.affiliate-box .aff-link:hover{background:#00d2ff33;text-decoration:none}
+.affiliate-box .note{font-size:.72rem;color:#5a6a80;margin-top:8px}
+.newsletter{background:linear-gradient(135deg,#1a1f36,#0f1629);border:1px solid #00d2ff33;border-radius:12px;padding:36px;margin:40px 0;text-align:center}
+.newsletter h3{color:#fff;margin-bottom:8px}
+.newsletter p{color:#8892b0;margin-bottom:20px;font-size:.9rem}
+.newsletter form{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.newsletter input[type="email"]{flex:1;min-width:200px;padding:10px 14px;border-radius:8px;border:1px solid #1e2a3a;background:#0a0e17;color:#fff;font-size:.9rem}
+.newsletter input[type="email"]::placeholder{color:#5a6a80}
+.newsletter button{background:#00d2ff;color:#0a0e17;padding:10px 24px;border-radius:8px;border:none;font-weight:700;cursor:pointer}
+.newsletter .privacy{font-size:.72rem;color:#5a6a80;margin-top:10px}
 .cta-box{background:linear-gradient(135deg,#1a1f36,#0f1629);border:1px solid #00d2ff33;border-radius:12px;padding:32px;margin:36px 0;text-align:center}
 .cta-box h3{color:#fff;margin-bottom:8px}
 .cta-box p{color:#8892b0;margin-bottom:16px}
@@ -57,8 +71,7 @@ footer{border-top:1px solid #1e2a3a;padding:24px 0;text-align:center;font-size:.
 </header>
 <div class="container">
 <div class="hero-article">
-<span class="badge hot">HOT TOPIC</span>
-<span class="badge">週刊レポート</span>
+<span class="badge hot">HOT TOPIC</span><span class="badge">週刊レポート</span>
 <h1>AI半導体インフラ投資分析 2026</h1>
 <div class="meta">2026年4月10日 更新 ｜ 読了時間 約8分 ｜ カテゴリ: 金融・投資分析</div>
 <div class="summary">2026年の半導体市場は前年比+34.4%の3,385億ドル規模に拡大。NVIDIA一強体制に挑むAMD・Google・自社チップ勢の動向と、アジア中堅企業の設備投資ラッシュ（合計1,360億ドル超）を分析します。</div>
@@ -66,50 +79,75 @@ footer{border-top:1px solid #1e2a3a;padding:24px 0;text-align:center;font-size:.
 <div class="content">
 <h2>1. 市場概況：2026年の半導体市場</h2>
 <div class="data-grid">
-<div class="stat"><div class="num">$3,386B</div><div class="label">2026年 世界市場規模</div></div>
+<div class="stat"><div class="num">$3,386B</div><div class="label">市場規模 (2026)</div></div>
 <div class="stat"><div class="num">+34.4%</div><div class="label">前年比成長率</div></div>
-<div class="stat"><div class="num">+32.1%</div><div class="label">ロジック市場成長</div></div>
-<div class="stat"><div class="num">+39.4%</div><div class="label">メモリ市場成長</div></div>
+<div class="stat"><div class="num">72%</div><div class="label">AIチップが占める成長対象</div></div>
 </div>
-<p>2026年の世界半導体市場はAIデータセンター需要を最大の牽引力として、歴史的な成長を記録しています。特にHBM（High Bandwidth Memory）やAIアクセラレーター向けの需要が爆発的に伸びており、メモリ市場の成長率がロジック市場を上回る構造が鮮明になっています。</p>
+<p>2026年の世界半導体市場は前年比+34.4%の約3,385億ドルに拡大。成長の主要ドライバーはAIデータセンター向けGPU/アクセラレータ需要です。</p>
+<p>NVIDIAのH200/B200シリーズが市場を牢固しつつも、AMD MI300XやGoogle TPU v6などの競合が激化。アジアでは台湾・TSMC、韓国・Samsung、日本・Rapidusの大型投資が相次いでいます。</p>
+
 <h2>2. 主要プレイヤー比較</h2>
-<div class="data-card">
-<h4>AIアクセラレーター市場シェア推移</h4>
 <table>
-<tr><th>企業</th><th>主力チップ</th><th>強み</th><th>注目ポイント</th></tr>
-<tr><td><strong>NVIDIA</strong></td><td>Blackwell B200/GB200</td><td>CUDAエコシステム</td><td>クラウド各社の脱CUDA依存が課題</td></tr>
-<tr><td><strong>AMD</strong></td><td>MI300X</td><td>HBM3 192GB搭載</td><td>大規模推論向けで存在感拡大</td></tr>
-<tr><td><strong>Google</strong></td><td>TPU v6</td><td>自社クラウド最適化</td><td>コンシューマー向け展開の可能性</td></tr>
-<tr><td><strong>Intel</strong></td><td>Gaudi 3</td><td>ファウンドリ事業</td><td>復活への道筋が焦点</td></tr>
+<tr><th>企業</th><th>主力製品</th><th>AIチップシェア</th><th>成長率</th><th>リスク</th></tr>
+<tr><td><strong>NVIDIA</strong></td><td>H200/B200 GPU</td><td>約80%</td><td>+55%</td><td><span class="risk-badge risk-mid">中</span></td></tr>
+<tr><td><strong>AMD</strong></td><td>MI300X/MI400</td><td>約12%</td><td>+89%</td><td><span class="risk-badge risk-mid">中</span></td></tr>
+<tr><td><strong>Google</strong></td><td>TPU v6 (Trillium)</td><td>自社用</td><td>N/A</td><td><span class="risk-badge risk-low">低</span></td></tr>
+<tr><td><strong>Intel</strong></td><td>Gaudi 3</td><td>約2%</td><td>+15%</td><td><span class="risk-badge risk-high">高</span></td></tr>
 </table>
+
+<div class="affiliate-box">
+<h4>半導体投資を始めるなら</h4>
+<p>半導体ETF（SOX指数連動）や個別株の分析に役立つ投資ツールをご紹介。初心者でも始めやすいネット証券の口座開設がおすすめです。</p>
+<a href="#" class="aff-link" data-affiliate="securities">ネット証券を比較する →</a>
+<div class="note">※ アフィリエイトリンクです。当サイトは報酬を受け取る場合があります。</div>
 </div>
-<p>NVIDIAはデータセンター向けAIアクセラレーター市場で依然として圧倒的なシェアを維持していますが、群雄割拠の時代に突入。AMDのMI300Xは192GBのHBM3メモリを搭載し、大規模モデル推論のコスト効率で優位性を発揮。Googleが自社チップを外部提供する動きも注視されています。</p>
-<h2>3. 投資トレンド：アジア設備投資ラッシュ</h2>
-<div class="data-grid">
-<div class="stat"><div class="num">$1,360B+</div><div class="label">アジア中堅企業 設備投資額</div></div>
-<div class="stat"><div class="num">+25%</div><div class="label">前年比増加率</div></div>
-<div class="stat"><div class="num">21兆円</div><div class="label">日本円換算</div></div>
-</div>
-<p>アジアの中堅半導体企業は2026年に合計1,360億ドル超の設備投資を計画。AI需要の急増がサプライチェーン全体に波及しています。</p>
-<h2>4. 注目セクターとリスク評価</h2>
+
+<h2>3. アジアの投資ラッシュ</h2>
+<p>アジア地域では半導体製造能力の拡充に向け、総額1,360億ドル超の設備投資が進行中です。</p>
 <table>
-<tr><th>セクター</th><th>成長期待</th><th>リスク</th><th>評価</th></tr>
-<tr><td>AIアクセラレーター</td><td>データセンター需要継続</td><td>過剰投資・バブル懸念</td><td><span class="risk high">高リスク・高リターン</span></td></tr>
-<tr><td>HBM / メモリ</td><td>+39.4%成長</td><td>供給過剰の可能性</td><td><span class="risk mid">中リスク</span></td></tr>
-<tr><td>後工程 / パッケージング</td><td>設備投資+25%</td><td>技術的ボトルネック</td><td><span class="risk low">安定成長</span></td></tr>
-<tr><td>車載半導体</td><td>EV普及に依存</td><td>需要回復が鈍い</td><td><span class="risk mid">回復待ち</span></td></tr>
+<tr><th>国/地域</th><th>主要投資</th><th>規模</th><th>目的</th></tr>
+<tr><td>台湾</td><td>TSMC 先端工場</td><td>$650億+</td><td>2nmプロセス</td></tr>
+<tr><td>韓国</td><td>Samsung 平沢拡張</td><td>$360億+</td><td>GAA 2nm</td></tr>
+<tr><td>日本</td><td>Rapidus 北海道工場</td><td>$350億+</td><td>2nm国産化</td></tr>
 </table>
+
+<h2>4. セクター別リスク評価</h2>
+<table>
+<tr><th>セクター</th><th>成長見通し</th><th>リスク要因</th><th>総合リスク</th></tr>
+<tr><td>AI GPU</td><td>非常に高い</td><td>供給過剰リスク</td><td><span class="risk-badge risk-mid">中</span></td></tr>
+<tr><td>メモリ (HBM)</td><td>高い</td><td>AI依存度</td><td><span class="risk-badge risk-mid">中</span></td></tr>
+<tr><td>製造装置</td><td>安定</td><td>地政学リスク</td><td><span class="risk-badge risk-low">低</span></td></tr>
+<tr><td>車載半導体</td><td>中程度</td><td>EV需要変動</td><td><span class="risk-badge risk-mid">中</span></td></tr>
+</table>
+
 <h2>5. 日本政府の半導体戦略</h2>
-<p>経済産業省は半導体・デジタル産業戦略の方向性を公表。Rapidusによる次世代2nmプロセス量産計画や、TSMCの熊本工場稼働を通じた国内サプライチェーン再構築が進行中です。</p>
-<h2>6. 米中摩擦と規制リスク</h2>
-<p>米国の対中輸出規制は引き続き強化されており、先端AIチップの中国向け出荷制限が市場構造に影響を与えています。中国は国産化を加速していますが、先端プロセスでの技術ギャップは依然大きく、市場の二極化リスクがあります。</p>
-<div class="cta-box">
-<h3>週刊レポートを受け取る</h3>
-<p>AI半導体市場の最新動向を毎週お届け。投資判断に役立つデータと分析をまとめています。</p>
-<a href="#" class="btn">メール登録（無料）</a>
+<p>日本政府は2025年度補正予算で半導体支援に約2兆円を計上。Rapidusの2nm工場建設に加え、TSMC熟本工場の拡充支援も進めています。</p>
+<p>「半導体・デジタル産業戦略」に基づき、2030年までに国内生産能力を現在の3倍に引き上げる目標を掲げています。</p>
+
+<h2>6. 米中半導体摩擦</h2>
+<p>米国の対中輸出規制は2026年も強化傾向が続きます。先端プロセス（7nm以下）の製造装置輸出制限に加え、HBMメモリの規制も拡大。</p>
+<p>投資家にとっては地政学リスクがポートフォリオの重要な考慮要素となっています。</p>
+
+<div class="affiliate-box">
+<h4>半導体株の分析におすすめの書籍</h4>
+<p>半導体業界の構造と投資戦略を理解するための必読書。</p>
+<a href="#" class="aff-link" data-affiliate="amazon-books">Amazonでチェック →</a>
+<div class="note">※ アフィリエイトリンクです。購入により当サイトに報酬が支払われます。</div>
 </div>
+
+<div class="newsletter">
+<h3>週刊レポートを受け取る</h3>
+<p>半導体・投資分析の最新レポートを毎週お届け。登録無料・解除自由。</p>
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<input type="email" name="email" placeholder="メールアドレスを入力" required>
+<input type="hidden" name="_subject" value="[半導体レポート] 新規登録">
+<button type="submit">無料登録</button>
+</form>
+<div class="privacy">※ メールアドレスはレポート配信のみに使用します。</div>
+</div>
+
 <div class="disclaimer">
-<strong>免責事項：</strong>本レポートは情報提供のみを目的としており、投資助言ではありません。投資判断はご自身の責任で行ってください。本サイトは金融商品取引法に基づく投資助言業の登録を受けていません。
+<strong>免責事項：</strong>本記事の情報は2026年4月時点のものです。投資劧誘を目的としたものではありません。投資に関する最終判断はご自身の責任で行ってください。本サイトにはアフィリエイトリンクが含まれています。
 </div>
 </div>
 </div>
@@ -117,4 +155,4 @@ footer{border-top:1px solid #1e2a3a;padding:24px 0;text-align:center;font-size:.
 <div class="container">&copy; 2026 Data Insights Lab. All rights reserved. | <a href="index.html">ホーム</a></div>
 </footer>
 </body>
-</html>
+  </html>
