@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ang580.github.io/data-insights/sitemap.xml
