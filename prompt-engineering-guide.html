@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>プロンプトエンジニアリング入門2026｜ChatGPT・Claude活用術【実例付き】| Data Insights Lab</title>
+<meta name="description" content="プロンプトエンジニアリングの基礎から応用テクニックまで実例付きで解説。ChatGPT・Claude・Geminiで使える効果的なプロンプトの書き方を2026年最新情報で紹介。">
+<link rel="canonical" href="https://ang580.github.io/data-insights/prompt-engineering-guide.html">
+<meta property="og:title" content="プロンプトエンジニアリング入門2026｜実例付き完全ガイド">
+<meta property="og:description" content="ChatGPT・Claudeで使える効果的なプロンプトの書き方を実例付きで解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ang580.github.io/data-insights/prompt-engineering-guide.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"プロンプトエンジニアリング入門2026｜実例付き完全ガイド","author":{"@type":"Organization","name":"Data Insights Lab"},"publisher":{"@type":"Organization","name":"Data Insights Lab"},"datePublished":"2026-04-22","dateModified":"2026-04-22","description":"プロンプトエンジニアリングの基礎から応用テクニックまで実例付きで解説。"}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BR1C988CW5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BR1C988CW5');</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0e17;color:#c8d6e5;font-family:'Segoe UI','Hiragino Sans',sans-serif;line-height:1.8}
+a{color:#00d2ff;text-decoration:none}a:hover{text-decoration:underline}
+header{background:#0a0e17;border-bottom:1px solid #1e2a3a;padding:16px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+header .inner{max-width:800px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.1rem;font-weight:700;color:#fff}.logo span{color:#00d2ff}
+nav a{color:#8892b0;margin-left:16px;font-size:.82rem}nav a:hover{color:#00d2ff}
+.hero{text-align:center;padding:56px 24px 40px;background:linear-gradient(180deg,#0a0e17,#111827)}
+.hero .badge{display:inline-block;background:#10b98122;color:#10b981;padding:4px 14px;border-radius:20px;font-size:.75rem;font-weight:600;margin-bottom:16px}
+.hero h1{font-size:1.9rem;color:#fff;line-height:1.4;margin-bottom:12px}
+.hero .sub{color:#8892b0;font-size:.95rem;max-width:600px;margin:0 auto}
+.meta{text-align:center;color:#5a6a80;font-size:.78rem;padding:12px 0;border-bottom:1px solid #1e2a3a}
+article{padding:40px 24px;max-width:800px;margin:0 auto}
+article h2{color:#fff;font-size:1.4rem;margin:40px 0 16px;padding-bottom:8px;border-bottom:2px solid #1e2a3a}
+article h3{color:#10b981;font-size:1.1rem;margin:28px 0 12px}
+article p{margin-bottom:16px;color:#c8d6e5;font-size:.95rem}
+article ul,article ol{margin:0 0 16px 24px;color:#c8d6e5;font-size:.95rem}
+article li{margin-bottom:6px}
+.prompt-example{background:#111827;border-left:3px solid #10b981;border-radius:0 8px 8px 0;padding:20px;margin:16px 0;font-family:'Courier New',monospace;font-size:.88rem;color:#e2e8f0;white-space:pre-wrap}
+.prompt-example .label{color:#10b981;font-weight:700;font-family:'Segoe UI','Hiragino Sans',sans-serif;margin-bottom:8px;display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:1px}
+.prompt-bad{border-left-color:#ef4444}
+.prompt-bad .label{color:#ef4444}
+.technique-card{background:#111827;border:1px solid #1e2a3a;border-radius:12px;padding:24px;margin:20px 0}
+.technique-card:hover{border-color:#10b981}
+.technique-card h4{color:#fff;font-size:1.05rem;margin-bottom:8px}
+.technique-card .difficulty{color:#10b981;font-size:.78rem;font-weight:600;margin-bottom:8px}
+.highlight-box{background:linear-gradient(135deg,#10b98111,#00d2ff11);border:1px solid #10b98133;border-radius:12px;padding:24px;margin:24px 0}
+.highlight-box h3{color:#10b981;margin-top:0}
+.comparison-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.85rem}
+.comparison-table th{background:#1a1f36;color:#10b981;padding:12px 10px;text-align:left;font-weight:600;border-bottom:2px solid #10b98133}
+.comparison-table td{padding:10px;border-bottom:1px solid #1e2a3a;color:#c8d6e5}
+.comparison-table tr:hover{background:#111827}
+.cta-box{background:#111827;border:1px solid #10b98144;border-radius:12px;padding:28px;text-align:center;margin:32px 0}
+.cta-box h3{color:#fff;margin-bottom:8px}
+.cta-box p{color:#8892b0;font-size:.9rem;margin-bottom:16px}
+.btn{display:inline-block;background:#10b98122;color:#10b981;padding:10px 24px;border-radius:8px;font-size:.88rem;font-weight:600}
+.btn:hover{background:#10b98144;text-decoration:none}
+.related{margin:48px 0;padding:0 24px}
+.related h2{font-size:1.3rem;color:#fff;margin-bottom:20px;text-align:center}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:900px;margin:0 auto}
+.related-card{background:#111827;border:1px solid #1e2a3a;border-radius:12px;padding:20px;transition:all .3s}
+.related-card:hover{border-color:#10b981;transform:translateY(-3px)}
+.related-card .cat{font-size:.7rem;color:#10b981;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.related-card h4{color:#fff;font-size:1rem;margin:6px 0}
+.related-card p{color:#8892b0;font-size:.82rem}
+.disclaimer{background:#111827;border:1px solid #1e2a3a;border-radius:8px;padding:16px;font-size:.78rem;color:#5a6a80;margin:32px 0}
+footer{text-align:center;padding:32px 24px;color:#5a6a80;font-size:.75rem;border-top:1px solid #1e2a3a;margin-top:40px}
+@media(max-width:600px){.hero h1{font-size:1.4rem}}
+</style>
+</head>
+<body>
+<header><div class="inner"><a href="index.html" class="logo">Data <span>Insights</span> Lab</a><nav><a href="index.html">ホーム</a><a href="chatgpt-vs-claude-vs-gemini.html">AI比較</a><a href="generative-ai-guide.html">生成AIガイド</a></nav></div></header>
+
+<section class="hero">
+<div class="badge">プロンプト × スキル 2026</div>
+<h1>プロンプトエンジニアリング入門<br>実例で学ぶAI活用術 2026</h1>
+<p class="sub">ChatGPT・Claude・Geminiの出力品質を劇的に改善するプロンプト設計テクニックを実例付きで解説</p>
+</section>
+<div class="meta">2026年4月22日 更新 ｜ 読了時間：約15分 ｜ Data Insights Lab編集部</div>
+
+<article>
+<h2>プロンプトエンジニアリングとは</h2>
+<p>プロンプトエンジニアリングとは、AIに対する指示（プロンプト）を最適化し、望む出力を得るための技術です。同じAIモデルでも、プロンプトの質によって出力品質は10倍以上変わります。</p>
+<p>2026年現在、プロンプトエンジニアリングは「AIを使いこなすための必須スキル」として認識されており、LinkedIn調査では関連求人が前年比3倍に増加。ビジネスパーソンの基礎リテラシーとなりつつあります。</p>
+
+<h2>基本テクニック5選</h2>
+
+<div class="technique-card">
+<h4>1. 役割の指定（Role Prompting）</h4>
+<div class="difficulty">難易度：★☆☆☆☆ 初級</div>
+<p>AIに特定の専門家としての役割を与えることで、その分野に特化した回答を引き出します。最もシンプルかつ効果的なテクニックです。</p>
+<div class="prompt-bad"><span class="label">悪い例</span>マーケティング戦略を教えて</div>
+<div class="prompt-example"><span class="label">良い例</span>あなたはB2B SaaS企業で10年の経験を持つマーケティング責任者です。年間広告予算500万円の中小企業向けに、リード獲得を最大化するデジタルマーケティング戦略を提案してください。KPIの設定方法も含めてください。</div>
+</div>
+
+<div class="technique-card">
+<h4>2. 出力形式の指定（Format Specification）</h4>
+<div class="difficulty">難易度：★☆☆☆☆ 初級</div>
+<p>出力のフォーマットを明確に指定することで、構造化された使いやすい回答を得られます。</p>
+<div class="prompt-bad"><span class="label">悪い例</span>プログラミング言語を比較して</div>
+<div class="prompt-example"><span class="label">良い例</span>Python・JavaScript・Goを以下の観点で比較表にまとめてください：
+- 学習難易度（5段階）
+- 求人数の多さ（5段階）
+- 年収中央値
+- 主な用途
+- 2026年のトレンド
+形式：Markdown表</div>
+</div>
+
+<div class="technique-card">
+<h4>3. Few-Shot（例示による誘導）</h4>
+<div class="difficulty">難易度：★★☆☆☆ 初中級</div>
+<p>期待する出力の例を1〜3個提示することで、AIの出力パターンを制御します。トーンやフォーマットの統一に効果的です。</p>
+<div class="prompt-example"><span class="label">良い例</span>以下の形式で製品レビューを書いてください。
+
+例1：
+製品名：AirPods Pro 3
+総合評価：★★★★☆
+一言：ノイキャン性能は最高だが、価格が高い
+おすすめ：通勤で音楽を聴く方
+
+この形式で「Galaxy S26 Ultra」のレビューを書いてください。</div>
+</div>
+
+<div class="technique-card">
+<h4>4. Chain of Thought（段階的思考）</h4>
+<div class="difficulty">難易度：★★★☆☆ 中級</div>
+<p>AIに「段階的に考えて」と指示することで、複雑な推論や分析の精度が向上します。数学、論理問題、ビジネス判断に特に有効です。</p>
+<div class="prompt-example"><span class="label">良い例</span>当社のSaaS製品の価格改定を検討しています。以下のデータを基に、段階的に分析してください。
+
+現在の月額：5,000円
+月間解約率：3.2%
+競合A：4,800円（機能は当社の80%）
+競合B：7,000円（機能は当社の120%）
+
+Step 1: 現在のポジショニングを分析
+Step 2: 価格弾力性を推定
+Step 3: 3つの価格シナリオを提案
+Step 4: 各シナリオの収益インパクトを試算</div>
+</div>
+
+<div class="technique-card">
+<h4>5. 制約条件の明示（Constraints）</h4>
+<div class="difficulty">難易度：★★☆☆☆ 初中級</div>
+<p>「やってほしいこと」だけでなく「やってほしくないこと」も明示することで、出力の品質と一貫性を大幅に向上させます。</p>
+<div class="prompt-example"><span class="label">良い例</span>中学生向けにAIの仕組みを説明する文章を書いてください。
+
+条件：
+- 500文字以内
+- 専門用語は使わない（使う場合は必ず説明を添える）
+- 日常生活の例え話を最低2つ含める
+- 「すごい」「やばい」などのカジュアルすぎる表現は避ける
+- 最後に「考えてみよう」の問いかけで締める</div>
+</div>
+
+<h2>応用テクニック</h2>
+
+<h3>メタプロンプト</h3>
+<p>AIにプロンプト自体を改善させるテクニックです。「このプロンプトをより効果的に改善してください」とAIに依頼することで、自分では気づかなかった改善点が見つかります。</p>
+
+<h3>ペルソナ・チェーン</h3>
+<p>複数の専門家視点を連鎖的に適用するテクニック。例えば「まずマーケターとして分析し、次にエンジニアとして実現可能性を評価し、最後にCFOとしてROIを算出してください」のように、多角的な分析を一度のプロンプトで実現します。</p>
+
+<h3>反復リファインメント</h3>
+<p>一度の出力で完璧を求めず、AIとの対話を通じて段階的に品質を向上させます。「この部分をもっと具体的に」「トーンをもう少しフォーマルに」など、部分的なフィードバックを繰り返すのが効果的です。</p>
+
+<h2>AIモデル別プロンプトのコツ</h2>
+<table class="comparison-table">
+<tr><th>モデル</th><th>得意なプロンプト</th><th>注意点</th></tr>
+<tr><td><a href="chatgpt-vs-claude-vs-gemini.html">ChatGPT</a></td><td>創造的タスク、ブレスト、コード生成</td><td>長文指示で文脈を忘れる場合あり</td></tr>
+<tr><td><a href="chatgpt-vs-claude-vs-gemini.html">Claude</a></td><td>長文分析、構造化出力、慎重な推論</td><td>役割指定で大きく出力が変わる</td></tr>
+<tr><td><a href="chatgpt-vs-claude-vs-gemini.html">Gemini</a></td><td>マルチモーダル、リサーチ、要約</td><td>Google連携を活用すると効果的</td></tr>
+</table>
+
+<div class="highlight-box">
+<h3>2026年のプロンプトトレンド</h3>
+<ul>
+<li><strong>マルチモーダルプロンプト</strong> — テキスト＋画像＋音声を組み合わせた複合的な指示</li>
+<li><strong>エージェント指向プロンプト</strong> — <a href="ai-agent-tools.html">AIエージェント</a>に複数ステップのタスクを委任する設計</li>
+<li><strong>システムプロンプト最適化</strong> — APIでのシステムプロンプト設計がビジネススキルとして定着</li>
+<li><strong>プロンプトライブラリ</strong> — 社内で効果的なプロンプトを共有・再利用する文化の浸透</li>
+</ul>
+</div>
+
+<h2>業務別プロンプトテンプレート</h2>
+
+<h3>議事録の要約</h3>
+<div class="prompt-example"><span class="label">テンプレート</span>以下の議事録を要約してください。
+
+形式：
+1. 決定事項（箇条書き）
+2. 未決事項とネクストアクション（担当者・期限付き）
+3. 次回までの宿題リスト
+
+注意：推測は含めず、議事録に明記された内容のみを反映してください。
+
+[議事録テキストをここに貼り付け]</div>
+
+<h3>メール作成</h3>
+<div class="prompt-example"><span class="label">テンプレート</span>以下の条件でビジネスメールを作成してください。
+
+宛先：[相手の役職・関係性]
+目的：[メールの目的]
+トーン：[フォーマル/カジュアル/丁寧]
+含めるべき情報：[箇条書きで列挙]
+文字数：[目安]
+言語：日本語（ビジネス敬語）</div>
+
+<h3>競合分析</h3>
+<div class="prompt-example"><span class="label">テンプレート</span>あなたは戦略コンサルタントです。以下の情報を基に競合分析を行ってください。
+
+自社：[製品名・特徴・価格]
+競合A：[製品名・特徴・価格]
+競合B：[製品名・特徴・価格]
+
+分析項目：
+1. SWOT分析（自社）
+2. 差別化ポイント
+3. 脅威と機会
+4. 推奨アクション3つ
+
+分析は具体的な数字やデータに基づいて行ってください。</div>
+
+<div class="cta-box">
+<h3>プロンプトの最新テクニックを受け取る</h3>
+<p>業務で使えるプロンプトテンプレートを毎週配信</p>
+<a href="index.html#newsletter" class="btn">無料ニュースレターに登録 →</a>
+</div>
+
+<div class="related"><h2>関連記事</h2><div class="related-grid">
+<a href="chatgpt-vs-claude-vs-gemini.html" style="text-decoration:none"><div class="related-card"><div class="cat">AI比較ガイド</div><h4>ChatGPT vs Claude vs Gemini 徹底比較</h4><p>3大AIの料金・精度・用途別おすすめを解説</p></div></a>
+<a href="ai-writing-tools.html" style="text-decoration:none"><div class="related-card"><div class="cat">AI × ライティング</div><h4>AIライティングツール比較 2026</h4><p>プロンプトと組み合わせて文章作成を効率化</p></div></a>
+<a href="generative-ai-guide.html" style="text-decoration:none"><div class="related-card"><div class="cat">AI × 入門</div><h4>生成AI完全ガイド 2026</h4><p>生成AIの仕組みから実践活用まで解説</p></div></a>
+</div></div>
+
+<div class="disclaimer"><strong>免責事項：</strong>本記事の情報は2026年4月時点のものです。AIモデルの仕様変更により、プロンプトの効果が変化する場合があります。当サイトの一部リンクにはアフィリエイトリンクが含まれます。</div>
+</article>
+
+<footer><p>&copy; 2026 Data Insights Lab. All rights reserved.</p><p style="margin-top:8px;"><a href="index.html">ホームに戻る</a></p><p style="margin-top:8px"><a href="privacy-policy.html" style="color:#5a6a80">プライバシーポリシー</a></p></footer>
+</body>
+</html>
