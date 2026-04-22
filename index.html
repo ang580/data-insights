@@ -32,7 +32,8 @@ header .container{display:flex;align-items:center;justify-content:space-between;
 .logo{font-size:1.2rem;font-weight:700;color:#fff}.logo span{color:#00d2ff}
 .tags{display:flex;gap:8px;margin-top:4px}
 .tag{background:#1a1f36;color:#00d2ff;padding:2px 10px;border-radius:12px;font-size:.72rem}
-nav a{color:#8892b0;margin-left:20px;font-size:.88rem}nav a:hover{color:#00d2ff}
+nav{display:flex;flex-wrap:wrap;gap:4px}
+nav a{color:#8892b0;margin-left:16px;font-size:.82rem;white-space:nowrap}nav a:hover{color:#00d2ff}
 .hero{text-align:center;padding:72px 24px 48px;background:linear-gradient(180deg,#0a0e17 0%,#111827 100%)}
 .hero h1{font-size:2.2rem;color:#fff;line-height:1.4;margin-bottom:16px}
 .hero p{font-size:1.05rem;color:#8892b0;max-width:640px;margin:0 auto 32px}
@@ -58,19 +59,24 @@ nav a{color:#8892b0;margin-left:20px;font-size:.88rem}nav a:hover{color:#00d2ff}
 .newsletter button:hover{background:#00b8e6}
 .newsletter .note{font-size:.75rem;color:#5a6a80;margin-top:10px}
 footer{text-align:center;padding:40px 24px;color:#5a6a80;font-size:.78rem;border-top:1px solid #1e2a3a;margin-top:48px}
+footer .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
+footer .footer-links a{color:#5a6a80}footer .footer-links a:hover{color:#00d2ff}
 </style>
 </head>
 <body>
-<header><div class="container"><div><div class="logo">Data <span>Insights</span> Lab</div><div class="tags"><span class="tag">データ分析</span><span class="tag">AI</span><span class="tag">金融</span><span class="tag">DX</span></div></div><nav><a href="ai-semiconductor.html">半導体投資</a><a href="ai-agent-tools.html">AIエージェント</a><a href="manufacturing-dx.html">製造業DX</a><a href="generative-ai-business.html">生成AI</a><a href="ai-image-generators.html">AI画像生成</a><a href="generative-ai-guide.html">生成AIガイド</a></nav></div></header>
-<section class="hero"><h1>データで読み解く<br>AI・金融・ビジネスの最前線</h1><p>最新の市場データと独自分析で、ビジネスの意思決定をサポート。週刊レポート・ツール比較・業界分析を無料配信中。</p><div class="stats"><div class="item"><div class="num">34</div><div class="label">分析テーマ</div></div><div class="item"><div class="num">6</div><div class="label">公開レポート</div></div><div class="item"><div class="num">12</div><div class="label">A評価テーマ</div></div><div class="item"><div class="num">Weekly</div><div class="label">更新頻度</div></div></div></section>
+<header><div class="container"><div><div class="logo">Data <span>Insights</span> Lab</div><div class="tags"><span class="tag">データ分析</span><span class="tag">AI</span><span class="tag">金融</span><span class="tag">DX</span></div></div><nav><a href="ai-semiconductor.html">半導体投資</a><a href="ai-agent-tools.html">AIエージェント</a><a href="manufacturing-dx.html">製造業DX</a><a href="generative-ai-business.html">生成AI活用</a><a href="ai-image-generators.html">AI画像生成</a><a href="generative-ai-guide.html">生成AIガイド</a><a href="chatgpt-vs-claude-vs-gemini.html">AI比較</a><a href="ai-writing-tools.html">AIライティング</a><a href="ai-business-guide.html">AIビジネス入門</a></nav></div></header>
+<section class="hero"><h1>データで読み解く<br>AI・金融・ビジネスの最前線</h1><p>最新の市場データと独自分析で、ビジネスの意思決定をサポート。週刊レポート・ツール比較・業界分析を無料配信中。</p><div class="stats"><div class="item"><div class="num">34</div><div class="label">分析テーマ</div></div><div class="item"><div class="num">9</div><div class="label">公開レポート</div></div><div class="item"><div class="num">12</div><div class="label">A評価テーマ</div></div><div class="item"><div class="num">Weekly</div><div class="label">更新頻度</div></div></div></section>
 <h2 class="section-title">最新レポート</h2>
 <div class="report-grid">
+<div class="report-card"><div class="category">AI × 比較</div><h3>ChatGPT vs Claude vs Gemini 徹底比較 2026</h3><p>3大AIアシスタントの性能・価格・得意分野を実測データで比較。用途別おすすめも解説。</p><a href="chatgpt-vs-claude-vs-gemini.html" class="btn">レポートを読む →</a></div>
+<div class="report-card"><div class="category">AI × ライティング</div><h3>AIライティングツール比較 2026</h3><p>Jasper・Copy.ai・Writesonicなど主要AIライティングツールの精度・機能・コスパを徹底検証。</p><a href="ai-writing-tools.html" class="btn">レポートを読む →</a></div>
+<div class="report-card"><div class="category">AI × ビジネス入門</div><h3>AIビジネス活用 完全ガイド 2026</h3><p>AI導入の基礎から実践まで。中小企業でも始められるAI活用の具体的ステップとROI分析。</p><a href="ai-business-guide.html" class="btn">レポートを読む →</a></div>
+<div class="report-card"><div class="category">AI × クリエイティブ</div><h3>AI画像生成ツール徹底比較 2026</h3><p>Midjourney・DALL-E 3・Stable Diffusionなど主要AI画像生成ツールの品質・価格・商用利用を比較分析。</p><a href="ai-image-generators.html" class="btn">レポートを読む →</a></div>
+<div class="report-card"><div class="category">AI × 入門</div><h3>生成AI完全ガイド 2026</h3><p>生成AIの仕組みから実践活用まで。初心者でもわかる包括的ガイドで、ビジネス・クリエイティブ活用を解説。</p><a href="generative-ai-guide.html" class="btn">レポートを読む →</a></div>
 <div class="report-card"><div class="category">AI × 金融</div><h3>AI半導体インフラ投資分析 2026</h3><p>NVIDIA・AMD・Broadcomの設備投資動向と、半導体セクターの投資機会を独自データで分析。</p><a href="ai-semiconductor.html" class="btn">レポートを読む →</a></div>
 <div class="report-card"><div class="category">AI × ツール</div><h3>AIエージェントツール比較 2026</h3><p>Claude Code・Devin 3.0・Cursor Agentなど主要AIエージェントの機能・価格・実用性を徹底比較。</p><a href="ai-agent-tools.html" class="btn">レポートを読む →</a></div>
 <div class="report-card"><div class="category">DX × 製造業</div><h3>製造業DX導入ガイド 2026</h3><p>国内製造業のDX成功事例と6ステップロードマップ。中小企業でも実践できる具体的な導入手順。</p><a href="manufacturing-dx.html" class="btn">レポートを読む →</a></div>
 <div class="report-card"><div class="category">AI × ビジネス</div><h3>生成AIビジネス活用ガイド 2026</h3><p>ChatGPT・Claude・Geminiのビジネス活用術。業務効率化から収益化までの実践ガイド。</p><a href="generative-ai-business.html" class="btn">レポートを読む →</a></div>
-<div class="report-card"><div class="category">AI × クリエイティブ</div><h3>AI画像生成ツール徹底比較 2026</h3><p>Midjourney・DALL-E 3・Stable Diffusionなど主要AI画像生成ツールの品質・価格・商用利用を比較分析。</p><a href="ai-image-generators.html" class="btn">レポートを読む →</a></div>
-<div class="report-card"><div class="category">AI × 入門</div><h3>生成AI完全ガイド 2026</h3><p>生成AIの仕組みから実践活用まで。初心者でもわかる包括的ガイドで、ビジネス・クリエイティブ活用を解説。</p><a href="generative-ai-guide.html" class="btn">レポートを読む →</a></div>
 </div>
 <div class="newsletter">
 <h2>無料ニュースレター</h2>
@@ -81,7 +87,7 @@ footer{text-align:center;padding:40px 24px;color:#5a6a80;font-size:.78rem;border
 <footer>
 <p>&copy; 2026 Data Insights Lab. All rights reserved.</p>
 <p style="margin-top:8px;">当サイトの一部リンクにはアフィリエイトリンクが含まれます。リンク経由で購入された場合、当サイトに報酬が発生することがあります。レポートの内容・評価には一切影響しません。</p>
-<p style="margin-top:8px;"><a href="ai-semiconductor.html">公開中</a> | <a href="ai-agent-tools.html">公開中</a> | <a href="manufacturing-dx.html">公開中</a> | <a href="generative-ai-business.html">公開中</a> | <a href="ai-image-generators.html">公開中</a> | <a href="generative-ai-guide.html">公開中</a></p>
+<div class="footer-links"><a href="chatgpt-vs-claude-vs-gemini.html">AI比較</a> | <a href="ai-writing-tools.html">AIライティング</a> | <a href="ai-business-guide.html">AIビジネス入門</a> | <a href="ai-image-generators.html">AI画像生成</a> | <a href="generative-ai-guide.html">生成AIガイド</a> | <a href="ai-semiconductor.html">半導体投資</a> | <a href="ai-agent-tools.html">AIエージェント</a> | <a href="manufacturing-dx.html">製造業DX</a> | <a href="generative-ai-business.html">生成AI活用</a></div>
 <p style="margin-top:8px"><a href="privacy-policy.html" style="color:#5a6a80">プライバシーポリシー</a></p></footer>
 </body>
 </html>
