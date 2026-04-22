@@ -54,6 +54,15 @@ tr:nth-child(even){background:#111827}
 footer{background:#080b12;padding:24px 40px;text-align:center;border-top:1px solid #1e293b;color:#64748b;font-size:0.85rem}
 footer a{color:#00d2ff;text-decoration:none}
 @media(max-width:768px){header{flex-direction:column;gap:12px}nav a{margin:0 12px}.hero h2{font-size:1.5rem}.newsletter input[type="email"]{width:100%;margin:0 0 12px 0}}
+
+.related{margin:48px 0;padding:0 24px}
+.related h2{font-size:1.3rem;color:#fff;margin-bottom:20px;text-align:center}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:900px;margin:0 auto}
+.related-card{background:#111827;border:1px solid #1e2a3a;border-radius:12px;padding:20px;transition:all .3s}
+.related-card:hover{border-color:#00d2ff;transform:translateY(-3px)}
+.related-card .cat{font-size:.7rem;color:#00d2ff;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.related-card h4{color:#fff;font-size:1rem;margin:6px 0}
+.related-card p{color:#8892b0;font-size:.82rem}
 </style>
 </head><body>
 <header>
@@ -158,6 +167,11 @@ footer a{color:#00d2ff;text-decoration:none}
 </form>
 </div>
 </div>
+<div class="related"><h2>関連記事</h2><div class="related-grid">
+<a href="chatgpt-vs-claude-vs-gemini.html" style="text-decoration:none"><div class="related-card"><div class="cat">AI比較ガイド</div><h4>ChatGPT vs Claude vs Gemini 徹底比較</h4><p>3大AIの料金・精度・用途別おすすめを解説</p></div></a>
+<a href="ai-image-generators.html" style="text-decoration:none"><div class="related-card"><div class="cat">AI × クリエイティブ</div><h4>AI画像生成ツール徹底比較 2026</h4><p>ビジネスで使えるAI画像生成ツールを比較</p></div></a>
+<a href="ai-writing-tools.html" style="text-decoration:none"><div class="related-card"><div class="cat">AI × ライティング</div><h4>AIライティングツール比較 2026</h4><p>コンテンツ制作を効率化するAIツール</p></div></a>
+</div></div>
 <footer>
 <p>&copy; 2026 Data Insights Lab. All rights reserved.</p>
 <p style="margin-top:8px;"><a href="index.html">ホームに戻る</a></p>
